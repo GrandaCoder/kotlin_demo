@@ -6,15 +6,15 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     //VIDEO:20 min  4:41
-
     var saldo: Float = 5.5f
     var adicional: Int = 5
 
     //explicacion de arrays
     var meses: Array<String> = arrayOf("Enero","Febrero","Marzo")
+    var recibos: Array<String> = arrayOf("agua","luz","gas")
 
     //ahora mostramos ua matriz  2D:
-    var matriz = arrayOf(
+    var matriz  = arrayOf(
         intArrayOf(1,2,3),
         intArrayOf(1,2,3),
         intArrayOf(1,2,3)
@@ -49,6 +49,29 @@ class MainActivity : AppCompatActivity() {
 
         retirar_dinero(500f)
 
+        recorrer_array(meses)
+
+        recibos[2] = "internet"
+
+        recorrer_array(recibos)
+
+        recorrer_matriz(matriz)
+
+    }
+
+    private fun recorrer_array(array: Array<String>) {
+        for (i in array){
+            println(i)
+        }
+
+        //indices nos devuelve un valor
+        for (i in array.indices){
+            println(array[i])
+        }
+
+        for (i in (0 until array.size)){
+            println(array[i])
+        }
     }
 
     fun mostrar_saldo(){
@@ -74,4 +97,14 @@ class MainActivity : AppCompatActivity() {
     fun verificar_dinero(cantidad: Float):Boolean{
         return cantidad <= saldo
     }
+
+    fun recorrer_matriz(array: Array<IntArray>){
+        for (i in array){
+            for (k in i){
+                println(k)
+            }
+        }
+    }
+
+
 }
