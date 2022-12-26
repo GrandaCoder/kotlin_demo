@@ -9,13 +9,21 @@ class MainActivity : AppCompatActivity() {
 
     var saldo: Float = 5.5f
     var adicional: Int = 5
-   // var meses: Array<String> = new Array[]
+
+    //explicacion de arrays
+    var meses: Array<String> = arrayOf("Enero","Febrero","Marzo")
+
+    //ahora mostramos ua matriz  2D:
+    var matriz = arrayOf(
+        intArrayOf(1,2,3),
+        intArrayOf(1,2,3),
+        intArrayOf(1,2,3)
+    )
 
     var numMes: Int = 1
-
     // video 14: aplicacion del when
-
     var fecha: String = "23/12/2022"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
