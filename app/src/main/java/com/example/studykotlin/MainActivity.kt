@@ -5,6 +5,8 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
+    //VIDEO:20 min  4:41
+
     var saldo: Float = 5.5f
     var adicional: Int = 5
    // var meses: Array<String> = new Array[]
@@ -33,5 +35,35 @@ class MainActivity : AppCompatActivity() {
             else -> println("Ojito")
         }
 
+        mostrar_saldo()
+
+        ingresar_dinero(500f)
+
+        retirar_dinero(500f)
+
+    }
+
+    fun mostrar_saldo(){
+        println("Tienes $saldo")
+    }
+
+    fun ingresar_dinero(dinero : Float){
+        saldo += dinero
+
+        println("USted ingresó ${dinero} y ahora dispone de ${saldo}")
+    }
+
+    fun retirar_dinero(dinero : Float){
+
+        if(verificar_dinero(dinero)) {
+            saldo -= dinero
+            println("USted retiró ${dinero} y ahora dispone de ${saldo}")
+        }else{
+            println("Cantidad ${dinero} superior al saldo ${saldo}")
+        }
+    }
+
+    fun verificar_dinero(cantidad: Float):Boolean{
+        return cantidad <= saldo
     }
 }
