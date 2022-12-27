@@ -57,6 +57,40 @@ class MainActivity : AppCompatActivity() {
 
         recorrer_matriz(matriz)
 
+        //---------------- colecciones set conjunto inmutable
+
+        /*Una colección Set es una estructura de datos en Kotlin
+        que almacena valores únicos sin ningún orden particular.
+        Es útil cuando quieres almacenar un conjunto de elementos y no te importa el orden en que se almacenen,
+         pero quieres asegurarte de que no haya elementos repetidos.*/
+
+        var clientesVIP: Set<Int> = setOf(1234,4231,7971)
+        println(clientesVIP)
+
+        //saber si un elemento está dentro de un conjunto
+        if (clientesVIP.contains(1234)) println("Es VIP") else println("No vip")
+
+        /*
+        * MutableSet es una interfaz en Kotlin que extiende la interfaz Set y agrega métodos para modificar la colección.
+        *  Es decir, permite añadir, eliminar o actualizar elementos en la colección.*/
+        var clientes:MutableSet<Int> = mutableSetOf(354345,25543,33212)
+        clientes.add(1212)
+
+        clientes.add(643)
+
+        println(clientes)
+
+        println("-------Listas y mutable list-----------")
+
+        /*En Kotlin, la interfaz List representa una lista de elementos que se pueden acceder por índice. Es inmutable,
+         lo que significa que no puedes modificarla una vez que se ha creado. Por otro lado, la interfaz MutableList extiende la interfaz
+         List y agrega métodos para modificar la lista. Es decir, permite añadir, eliminar o actualizar elementos en la lista.*/
+        var divisas: List<String> = listOf("USD","EUR","YEN")
+        println(divisas)
+        
+        var bolsa: MutableList<String> = mutableListOf("Coca-Cola","Adidas","Amazon")
+        println(bolsa)
+
     }
 
     private fun recorrer_array(array: Array<String>) {
