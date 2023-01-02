@@ -23,7 +23,7 @@ open class Pokemon(protected var name:String, protected var attack: Float, prote
         this.life = life
     }
 
-    fun attack() {
+     open fun attack() {
         println("EL ${name} Ataca generico")
     }
 }
@@ -32,6 +32,19 @@ class WaterPokemon(name: String,attack: Float,life: Float): Pokemon(name, attack
 
     fun respirar(){
         println("EL ${name} está Respirando....")
+    }
+
+}
+
+class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, life){
+
+    fun respirar(){
+        println("EL ${name} está Respirando....")
+    }
+
+
+    override fun attack() {
+        println("EL ${name} Ataca con fuegooo")
     }
 
 }
