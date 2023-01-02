@@ -10,8 +10,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var firePok = FirePokemo("Fogon",10f,100f)
-        firePok.attack()
 
+        var waterPok = WaterPokemon("Hielo",69f,85f)
+
+
+        batalla(firePok,waterPok)
+
+    }
+
+    fun batalla(pokemonA: Pokemon, pokemonB: Pokemon){
+        println("Batalla entre ${pokemonA.getName()} vs ${pokemonB.getName()}")
+
+        pokemonA.attack()
+        pokemonB.attack()
     }
 
 
