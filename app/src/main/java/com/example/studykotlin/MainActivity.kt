@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         batalla(firePok,waterPok)
 
         firePok.decirGracias()
+        firePok.bye()
 
     }
 

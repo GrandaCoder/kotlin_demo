@@ -36,7 +36,7 @@ class WaterPokemon(name: String,attack: Float,life: Float): Pokemon(name, attack
 
 }
 
-class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, life){
+class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, life),DecirAdios{
 
     fun respirar(){
         println("EL ${name} está Respirando....")
@@ -55,5 +55,13 @@ class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, 
 abstract class Agradecer(){
     fun decirGracias(){
         println("Gracias")
+    }
+}
+
+//desde interface podemos decir que deben tener los objetos, es como una herencia
+interface DecirAdios{
+
+    fun bye() {
+        println("Adios desde interace")
     }
 }
