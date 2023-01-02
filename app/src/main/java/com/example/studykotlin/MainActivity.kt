@@ -18,6 +18,13 @@ class MainActivity : AppCompatActivity() {
         camilo.cambiarNombre()
         println(camilo.nombre)
 
+        val gato = Gato("Misifus", 3, "negro", "liso")
+        gato.color = "azul"
+
+        var waterPok = WaterPokemon("Motas",10f,100f)
+
+        waterPok.attack()
+
     }
 
 
