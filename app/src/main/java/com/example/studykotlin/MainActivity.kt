@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         batalla(firePok,waterPok)
 
+        firePok.decirGracias()
+
     }
 
     fun batalla(pokemonA: Pokemon, pokemonB: Pokemon){

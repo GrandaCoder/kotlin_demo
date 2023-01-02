@@ -3,7 +3,7 @@ package com.example.studykotlin
 import android.annotation.SuppressLint
 
 //utilizamos protected para que los hijos puedan utilizarlo
-open class Pokemon(protected var name:String, protected var attack: Float, protected var life:Float) {
+open class Pokemon(protected var name:String, protected var attack: Float, protected var life:Float): Agradecer() {
 
     //metodos getters
 
@@ -50,4 +50,10 @@ class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, 
         println("EL ${name} Ataca con fuegooo")
     }
 
+}
+//esto es algo que se usan pero no se instancias objetos de esta clase, solo se heredan los metodos
+abstract class Agradecer(){
+    fun decirGracias(){
+        println("Gracias")
+    }
 }
