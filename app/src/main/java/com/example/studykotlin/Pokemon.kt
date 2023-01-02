@@ -44,6 +44,9 @@ class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, 
 
 
     override fun attack() {
+
+        //con super ejecutamos la funcion del padre
+        super.attack()
         println("EL ${name} Ataca con fuegooo")
     }
 
