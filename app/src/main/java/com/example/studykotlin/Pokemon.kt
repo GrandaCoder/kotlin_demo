@@ -38,6 +38,10 @@ class WaterPokemon(name: String,attack: Float,life: Float): Pokemon(name, attack
 
 class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, life),DecirAdios{
 
+    //esto es para asignarle valores mas tarde
+    lateinit var ballFire: BallFire
+    var numeroDeBolas: Int = 0
+
     fun respirar(){
         println("EL ${name} está Respirando....")
     }
@@ -47,10 +51,27 @@ class FirePokemo(name: String,attack: Float,life: Float): Pokemon(name, attack, 
 
         //con super ejecutamos la funcion del padre
         super.attack()
-        println("EL ${name} Ataca con fuegooo")
+        println("EL ${name} Ataca con bola${++numeroDeBolas} de fuego")
+
+        //inicianmos la bola
+        ballFire = BallFire()
+        ballFire.arrojarBola()
     }
 
 }
+
+//colaboracion entre clases
+class BallFire(t:Int = 100){
+
+    fun arrojarBola(){
+        println("Arrojando la bola")
+    }
+}
+
+
+
+
+
 //esto es algo que se usan pero no se instancias objetos de esta clase, solo se heredan los metodos
 abstract class Agradecer(){
     fun decirGracias(){
