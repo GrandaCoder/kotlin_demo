@@ -9,6 +9,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var firePok = FirePokemo("Fogon",10f,100f)
+
+        var waterPok = WaterPokemon("Hielo",69f,85f)
+
+
+        batalla(firePok,waterPok)
 
         //subclases anidadas
         var sc = SubCLasses()
@@ -21,8 +27,19 @@ class MainActivity : AppCompatActivity() {
         var inn = SubCLasses().Interna()
         println(inn.prsentar())
 
+        //objeto sin clase
+        camilo.saludo()
+
+
     }
 
+    //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
+    object camilo{
+        var apodo = "Granda"
+        fun saludo(){
+            println("Hola me llaman ${apodo}")
+        }
+    }
 
 
 
