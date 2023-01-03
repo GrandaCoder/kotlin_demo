@@ -30,6 +30,13 @@ class MainActivity : AppCompatActivity() {
         //objeto sin clase
         camilo.saludo()
 
+        //data class
+        var sol: Star = Star("Sol",696340f,"Via lactea")
+        println(sol)
+
+        var betelgeuse: Star = Star("Betelgeuse",617100000f,"Orion")
+        betelgeuse.alive=false
+        println(betelgeuse.alive)
 
     }
 
