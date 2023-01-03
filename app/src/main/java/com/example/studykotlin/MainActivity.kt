@@ -38,6 +38,18 @@ class MainActivity : AppCompatActivity() {
         betelgeuse.alive=false
         println(betelgeuse.alive)
 
+        //enum class
+        var hoy:Dias = Dias.LUNES
+        var semena:Array<Dias> = Dias.values()
+
+        for (day in semena) println(day)
+
+        println(hoy.name)
+        println(hoy.ordinal)
+
+        println(hoy.Saludo())
+
+
     }
 
     //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
