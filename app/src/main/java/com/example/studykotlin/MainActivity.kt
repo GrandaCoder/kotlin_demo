@@ -9,14 +9,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var firePok = FirePokemo("Fogon",10f,100f)
 
-        var waterPok = WaterPokemon("Hielo",69f,85f)
+        //subclases anidadas
+        var sc = SubCLasses()
+        println(sc.presentar())
 
+        var ani = SubCLasses.Anidada()
+        println(ani.presentar())
 
-        batalla(firePok,waterPok)
+        //se crea el padre. porque internal esta haciendo uso de la variable padre
+        var inn = SubCLasses().Interna()
+        println(inn.prsentar())
 
     }
+
+
+
 
     fun batalla(pokemonA: Pokemon, pokemonB: Pokemon){
         println("Batalla entre ${pokemonA.getName()} vs ${pokemonB.getName()}")
