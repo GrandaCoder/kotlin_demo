@@ -1,8 +1,8 @@
 package com.example.studykotlin
 
 //adimte metodos y atributos... pero los atributos son constantes
-enum class Dias {
-    LUNES,MARTES,MIERCOLES,JUEVES,VIERNES,SABADO,DOMINGO;
+enum class Dias(val laboral:Boolean,val jornada:Int){
+    LUNES(true,8),MARTES(true,8),MIERCOLES(true,8),JUEVES(true,8),VIERNES(true,8),SABADO(false,5),DOMINGO(false,0);
 
     fun Saludo():String {
         when(this){

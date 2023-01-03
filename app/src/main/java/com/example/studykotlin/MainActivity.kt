@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
 
         println(hoy.Saludo())
 
+        //anum class con paso de parametros
+        println("el dia ${hoy.name} es kaboral? ${hoy.laboral}")
 
     }
 
