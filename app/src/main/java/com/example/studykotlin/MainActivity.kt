@@ -8,73 +8,33 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var a =5;
+        var b = 6
+        //se puede guardar una funcion anonima en una variable
+        var funcion = { x:Int, y:Int -> x+y };
+        println("La suma de ${a} + ${b} es ${calculadora(a,b,funcion)}")
 
+        //se podemos modificar la funcion bajo la misma variable
+        funcion = { x:Int, y:Int -> x-y };
+        println("La resta de ${a} + ${b} es ${calculadora(a,b,funcion)}")
 
-        //creamos una persona
+        // ahora con lambdas anonimas
+        println("con lambda La resta de ${a} + ${b} es ${calculadora(a,b,{ x:Int, y:Int -> x-y })}")
 
-        println("Revisando si es policia")
-        var person: Person = Person("Simon","5236T2FY3",1.80f)
-        if (person.checkPolicia(::inColombia)) println("policia") else println("No policia")
-
+        // ahora con lambdas anonimas POR ejemplo CABEZA -> CUERPO ULTIMA LINEA ALGO
+        println("con lambda La SUMA DE LLAMBDA de ${a} + ${b} es ${calculadora(a,b) 
+        { x: Int, y: Int ->
+            var numeroA = x
+            var numeroB = y
+            var resultado = numeroA+numeroB
+            resultado
+        }}"
+        )
     }
 
-    private fun Person.checkPolicia( fn : (Float)-> Boolean):Boolean{
-        return  fn(height)
+    private fun calculadora(numA:Int , numB:Int , fn : (Int ,Int) -> Int): Int {
+        return fn(numA,numB)
     }
-
-    private fun inColombia(altura:Float):Boolean{
-        return altura >= 1.60f
-    }
-
-    private fun inEspania(altura:Float):Boolean{
-        return altura >= 1.65f
-    }
-
-    //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
-    object camilo{
-        var apodo = "Granda"
-        fun saludo(){
-            println("Hola me llaman ${apodo}")
-        }
-    }
-
-
-
-    fun batalla(pokemonA: Pokemon, pokemonB: Pokemon){
-        println("Batalla entre ${pokemonA.getName()} vs ${pokemonB.getName()}")
-
-        pokemonA.attack()
-        pokemonB.attack()
-    }
-
-    //funciones de extencion, es como agregar una funcionalidad a una clase, pero sin heredar
-    private fun String.noSPaces():String{
-        return this.replace(" ", "")
-    }
-
-
-
-
-
-    // funciones de orden supercior. funciones que reciben funciones
-
-    private fun calculadora(numeroA: Int,numeroB:Int , fn: (Int,Int)-> Int ):Int {
-        return  fn(numeroA,numeroB)
-    }
-
-    //funcion que recibe dos numeros y develve la suma de los dos
-    private fun suma(numA:Int,numB:Int ):Int {
-        return numA+numB
-    }
-
-    private fun resta(numA:Int,numB:Int ):Int {
-        return numA-numB
-    }
-
-    // de manera mas corta
-    private fun multiplicacion(numA:Int, numB:Int) = numA*numB
-
-
 }
 
 
