@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
         //anum class con paso de parametros
         println("el dia ${hoy.name} es kaboral? ${hoy.laboral}")
 
+        var conEspacio:String = "Soy con espacio"
+
+        println(conEspacio.noSPaces())
+
     }
 
     //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
@@ -69,6 +73,11 @@ class MainActivity : AppCompatActivity() {
 
         pokemonA.attack()
         pokemonB.attack()
+    }
+
+    //funciones de extencion, es como agregar una funcionalidad a una clase, pero sin heredar
+    private fun String.noSPaces():String{
+        return this.replace(" ", "")
     }
 
 
