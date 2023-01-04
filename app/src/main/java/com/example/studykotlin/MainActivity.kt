@@ -9,57 +9,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var firePok = FirePokemo("Fogon",10f,100f)
 
-        var waterPok = WaterPokemon("Hielo",69f,85f)
+        //creamos una persona
 
+        println("Revisando si es policia")
+        var person: Person = Person("Simon","5236T2FY3",1.80f)
+        if (person.checkPolicia(::inColombia)) println("policia") else println("No policia")
 
-        batalla(firePok,waterPok)
+    }
 
-        //subclases anidadas
-        var sc = SubCLasses()
-        println(sc.presentar())
+    private fun Person.checkPolicia( fn : (Float)-> Boolean):Boolean{
+        return  fn(height)
+    }
 
-        var ani = SubCLasses.Anidada()
-        println(ani.presentar())
+    private fun inColombia(altura:Float):Boolean{
+        return altura >= 1.60f
+    }
 
-        //se crea el padre. porque internal esta haciendo uso de la variable padre
-        var inn = SubCLasses().Interna()
-        println(inn.prsentar())
-
-        //objeto sin clase
-        camilo.saludo()
-
-        //data class
-        var sol: Star = Star("Sol",696340f,"Via lactea")
-        println(sol)
-
-        var betelgeuse: Star = Star("Betelgeuse",617100000f,"Orion")
-        betelgeuse.alive=false
-        println(betelgeuse.alive)
-
-        //enum class
-        var hoy:Dias = Dias.LUNES
-        var semena:Array<Dias> = Dias.values()
-
-        for (day in semena) println(day)
-
-        println(hoy.name)
-        println(hoy.ordinal)
-
-        println(hoy.Saludo())
-
-        //anum class con paso de parametros
-        println("el dia ${hoy.name} es kaboral? ${hoy.laboral}")
-
-        var conEspacio:String = "Soy con espacio"
-
-        println(conEspacio.noSPaces())
-
-        //funciones de orden superior con suma
-        println("La calculadora hace")
-        println(calculadora(5,5,::suma))
-
+    private fun inEspania(altura:Float):Boolean{
+        return altura >= 1.65f
     }
 
     //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
