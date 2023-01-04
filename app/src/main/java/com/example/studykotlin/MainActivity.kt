@@ -8,33 +8,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var a =5;
-        var b = 6
-        //se puede guardar una funcion anonima en una variable
-        var funcion = { x:Int, y:Int -> x+y };
-        println("La suma de ${a} + ${b} es ${calculadora(a,b,funcion)}")
 
-        //se podemos modificar la funcion bajo la misma variable
-        funcion = { x:Int, y:Int -> x-y };
-        println("La resta de ${a} + ${b} es ${calculadora(a,b,funcion)}")
+        //aqui podemos observar de que lo que etsá al lado de intarray es una lambda
+        var array = IntArray(8){5}
+        for (i in array)
+            println(i)
 
-        // ahora con lambdas anonimas
-        println("con lambda La resta de ${a} + ${b} es ${calculadora(a,b,{ x:Int, y:Int -> x-y })}")
+        var array2 = IntArray(8){it} // it de iterador 01,2,3,....n
 
-        // ahora con lambdas anonimas POR ejemplo CABEZA -> CUERPO ULTIMA LINEA ALGO
-        println("con lambda La SUMA DE LLAMBDA de ${a} + ${b} es ${calculadora(a,b) 
-        { x: Int, y: Int ->
-            var numeroA = x
-            var numeroB = y
-            var resultado = numeroA+numeroB
-            resultado
-        }}"
-        )
+        var array3 = IntArray(8){it *2} //multiplica los valores por 2 arroja 2,4,8,16
+
+        var array4 = IntArray(8){i -> i*3} //multiplica los valores por 3 arroja 3,,6,9
+
     }
 
-    private fun calculadora(numA:Int , numB:Int , fn : (Int ,Int) -> Int): Int {
-        return fn(numA,numB)
-    }
 }
 
 
