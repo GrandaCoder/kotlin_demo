@@ -56,6 +56,10 @@ class MainActivity : AppCompatActivity() {
 
         println(conEspacio.noSPaces())
 
+        //funciones de orden superior con suma
+        println("La calculadora hace")
+        println(calculadora(5,5,::suma))
+
     }
 
     //Objetos anonimos. NO se han declarado las clases. se crean solo en el momento
@@ -79,6 +83,28 @@ class MainActivity : AppCompatActivity() {
     private fun String.noSPaces():String{
         return this.replace(" ", "")
     }
+
+
+
+
+
+    // funciones de orden supercior. funciones que reciben funciones
+
+    private fun calculadora(numeroA: Int,numeroB:Int , fn: (Int,Int)-> Int ):Int {
+        return  fn(numeroA,numeroB)
+    }
+
+    //funcion que recibe dos numeros y develve la suma de los dos
+    private fun suma(numA:Int,numB:Int ):Int {
+        return numA+numB
+    }
+
+    private fun resta(numA:Int,numB:Int ):Int {
+        return numA-numB
+    }
+
+    // de manera mas corta
+    private fun multiplicacion(numA:Int, numB:Int) = numA*numB
 
 
 }
