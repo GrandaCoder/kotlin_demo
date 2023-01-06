@@ -6,16 +6,17 @@ import android.os.Bundle
 
 
 class MainActivity : AppCompatActivity() {
+
+    // va aqui porque es un atributo de un OBJETO lateinit quiere decir que se inicializa despues,
+    private lateinit var atributoPersona:Person
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       //operador elvis si algo es ulo hacer algo sino otra cosa. se puede resumir con elvis
-
-        var pais: String? = "Rusia"
-        pais = pais ?: "NO ESPECIFICADO"
-
-        println(pais)
+       // A DIFERENCIA DE
+         var variablePersona:Person
+        // es una variable y no un atributo
     }
 }
 
