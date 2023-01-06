@@ -7,16 +7,16 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    // va aqui porque es un atributo de un OBJETO lateinit quiere decir que se inicializa despues,
-    private lateinit var atributoPersona:Person
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       // A DIFERENCIA DE
-         var variablePersona:Person
-        // es una variable y no un atributo
+        //lazy es como para decir en caso de que no se haya inicilializado
+        val nombre: String by lazy { "Sin nombre" }
+
+        //imprimirá sin nombre
+        println(nombre)
     }
 }
 
