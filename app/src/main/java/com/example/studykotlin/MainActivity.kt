@@ -42,11 +42,17 @@ class MainActivity : AppCompatActivity() {
 
         //instanciamos el objeto para modificar sus valores, este es autocompletador. como una lista de valores
         var autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
+
         var countries: Array<String> = resources.getStringArray(R.array.paises)
-
-
         var adapter : ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,countries)
+
         autoCompleteTextView.setAdapter(adapter)
+
+        //multi-complete
+        var multiAutoCompleteTextView: MultiAutoCompleteTextView = findViewById(R.id.multiAutoCompleteTextView)
+        multiAutoCompleteTextView.setAdapter(adapter)
+        multiAutoCompleteTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
+
 
     }
 
