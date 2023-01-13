@@ -3,9 +3,7 @@ package com.example.studykotlin
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.addTextChangedListener
 
 
@@ -41,6 +39,14 @@ class MainActivity : AppCompatActivity() {
         var inicio = etEjemplo.selectionStart
         var end = etEjemplo.selectionEnd
 
+
+        //instanciamos el objeto para modificar sus valores, este es autocompletador. como una lista de valores
+        var autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
+        var countries: Array<String> = resources.getStringArray(R.array.paises)
+
+
+        var adapter : ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,countries)
+        autoCompleteTextView.setAdapter(adapter)
 
     }
 

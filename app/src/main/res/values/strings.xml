@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">StudyKotlin</string>
+    <string-array name="paises">
+        <item>Colombia</item>
+        <item>Columbus</item>
+        <item>Colorado</item>
+        <item>Chile</item>
+    </string-array>
 </resources>
