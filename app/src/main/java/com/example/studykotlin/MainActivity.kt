@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.core.widget.addTextChangedListener
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,44 +16,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //instanciamos el objeto
-        var tvEJemplo: TextView = findViewById(R.id.tvEjemplo)
-        tvEJemplo.text = "Text cambiado desde codigo"
-        tvEJemplo.setTextColor(Color.RED)
+        //traemos los groups chips
+        var cgCondiciones = findViewById<ChipGroup>(R.id.cgCondiciones)
+        var chip:Chip
 
-        //para abrir os listeners "Objeto setOnEvento"
-        tvEJemplo.setOnClickListener {
-            Toast.makeText(this,"Me hicieron click",Toast.LENGTH_SHORT).show()
-            tvEJemplo.setTextColor(Color.GREEN)
-        }
+        //sacamos cada uno de los chips, como esto recibe de tipo view se hace un casteo
+        for (i in 0 until cgCondiciones.childCount){
+            chip = cgCondiciones.getChildAt(i) as Chip // se convierte en chip
 
-        //podemos agregar un error a un campo de texto
-        var etEjemplo: EditText = findViewById(R.id.etEjemplo)
+            // le agregamos los listeners, si se presiona en la x se elimina el chip
+            chip.setOnCloseIconClickListener {
+                cgCondiciones.removeView(it)
+            }
 
-        //listener que cabia
-        etEjemplo.addTextChangedListener {
-            if (etEjemplo.text.length == 0){
-                etEjemplo.setError("Campo vacio")
+            //si se hace click se muestra un mensaje
+            chip.setOnClickListener {
+                var aux = it as Chip
+                Toast.makeText(this,"${aux.text} pulsado",Toast.LENGTH_SHORT).show()
             }
         }
-
-        etEjemplo.setSelection(3)
-        var inicio = etEjemplo.selectionStart
-        var end = etEjemplo.selectionEnd
-
-
-        //instanciamos el objeto para modificar sus valores, este es autocompletador. como una lista de valores
-        var autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
-
-        var countries: Array<String> = resources.getStringArray(R.array.paises)
-        var adapter : ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,countries)
-
-        autoCompleteTextView.setAdapter(adapter)
-
-        //multi-complete
-        var multiAutoCompleteTextView: MultiAutoCompleteTextView = findViewById(R.id.multiAutoCompleteTextView)
-        multiAutoCompleteTextView.setAdapter(adapter)
-        multiAutoCompleteTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
 
 
     }
