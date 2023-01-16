@@ -90,4 +90,12 @@
         android:background="@drawable/ic_gradient"
         android:text="Oval btn" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_email"
+        android:backgroundTint="#A0B2E8"
+        />
+
 </LinearLayout>
