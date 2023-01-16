@@ -3,7 +3,9 @@ package com.example.studykotlin
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
+import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
@@ -35,6 +37,19 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"${aux.text} pulsado",Toast.LENGTH_SHORT).show()
             }
         }
+
+        //agegamos un chip desde codigo
+        val chipNew = Chip(this)
+        chipNew.text ="Opcion"
+        chipNew.chipIcon = ContextCompat.getDrawable(this,R.drawable.ic_email)
+        chipNew.isCloseIconVisible = true
+        chipNew.isCheckedIconVisible = true
+        chipNew.isClickable =true
+        chipNew.isClickable =false
+
+        // lo agregamos al chip group
+        cgCondiciones.addView(chipNew as View)
+        chipNew.setOnCloseIconClickListener { cgCondiciones.removeView(chipNew as View) }
 
 
     }
