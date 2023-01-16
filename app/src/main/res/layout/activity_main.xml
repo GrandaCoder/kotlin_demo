@@ -135,6 +135,7 @@
             android:id="@+id/chip5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:chipIcon="@drawable/ic_email"
             style="@style/chEntry"
             android:text="desayuno"/>
 

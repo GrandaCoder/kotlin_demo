@@ -16,7 +16,7 @@
 
     <style name="chEntry" parent="Widget.MaterialComponents.Chip.Entry">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@drawable/ch_chiptextcolor</item>
         <item name="chipBackgroundColor">#FC6FF4</item>
         <item name="chipStrokeColor">#051A3E</item>
         <item name="chipStrokeWidth">2dp</item>
