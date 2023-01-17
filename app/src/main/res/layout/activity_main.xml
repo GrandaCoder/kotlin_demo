@@ -50,97 +50,25 @@
         android:layout_height="wrap_content"
         android:hint="MultiAutoCompleteTextView" />
 
-    <Button
-        android:id="@+id/button"
+    <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar sesión"
-        android:backgroundTint="@color/teal_700"
-        />
+        android:layout_height="wrap_content" >
 
-    <android.widget.Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:backgroundTint="#EA13A2"
-        android:background="@drawable/corners"
-        android:text="Personalizado" />
-
-    <android.widget.Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:backgroundTint="#EA13A2"
-        android:background="@drawable/ic_oval"
-        android:text="Oval btn" />
-
-    <android.widget.Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/ic_gradient"
-        android:text="Oval btn" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_email"
-        android:backgroundTint="#A0B2E8"
-        />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cgCondiciones"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
+        <RadioButton
+            android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="parking"
-            style="@style/chEntry"
-            />
+            android:checked="true"
+            android:buttonTint="#DA009C"
+            android:text="PLaya" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
+        <RadioButton
+            android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/chEntry"
-            android:text="baños"/>
+            android:text="Montania" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/chEntry"
-            android:text="piscina"/>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/chEntry"
-            android:text="restaurant"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chipIcon="@drawable/ic_email"
-            style="@style/chEntry"
-            android:text="desayuno"/>
-
-    </com.google.android.material.chip.ChipGroup>
+    </RadioGroup>
 
 </LinearLayout>
