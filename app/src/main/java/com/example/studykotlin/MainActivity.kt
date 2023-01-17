@@ -18,7 +18,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Traemos el onjeto radio groups
+        var rgVacaciones = findViewById<RadioGroup>(R.id.rgVacaciones)
 
+        //este es el button
+        var radioButton = rgVacaciones.getChildAt(1) as RadioButton
+        rgVacaciones.check(radioButton.id)
+
+    }
+
+    fun onRadioCLicked(view:View){
+
+        if (view is RadioButton){
+            var checked = view.isChecked
+
+            when(view.id){
+                R.id.radioButton -> {
+                    Toast.makeText(this,"Vamos a la playa",Toast.LENGTH_SHORT).show()
+                }
+
+                R.id.radioButton2 -> {
+                    Toast.makeText(this,"Vamos a la montaña",Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }
     }
 
 }

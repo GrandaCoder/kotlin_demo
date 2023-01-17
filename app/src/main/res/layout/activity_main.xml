@@ -51,6 +51,7 @@
         android:hint="MultiAutoCompleteTextView" />
 
     <RadioGroup
+        android:id="@+id/rgVacaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
@@ -60,13 +61,17 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:buttonTint="#DA009C"
-            android:text="PLaya" />
+            android:text="PLaya"
+            android:onClick="onRadioCLicked"
+            />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Montania" />
+            android:text="Montania"
+            android:onClick="onRadioCLicked"
+            />
 
 
     </RadioGroup>
