@@ -103,6 +103,15 @@
         android:button="@drawable/cb_custom"
         />
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOn="SI"
+        android:textOff="NO"
+
+        />
 
 
 </LinearLayout>

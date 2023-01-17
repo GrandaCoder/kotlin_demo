@@ -18,9 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //check box desde la caja
-        var cbSeguro = findViewById<CheckBox>(R.id.checkBox2)
-        cbSeguro.isChecked = true
+        //toggle
+        var tgNormal = findViewById<ToggleButton>(R.id.toggleButton)
+        tgNormal.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked){
+                Toast.makeText(this,"Activado",Toast.LENGTH_SHORT).show()
+            }
+        }
+
 
     }
 
