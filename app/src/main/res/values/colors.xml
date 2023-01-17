@@ -11,4 +11,7 @@
 
     <color name="micolor">#BA11F8</color>
 
+    <color name="colorOn">#FFC107</color>
+    <color name="colorOff">#383942</color>
+
 </resources>

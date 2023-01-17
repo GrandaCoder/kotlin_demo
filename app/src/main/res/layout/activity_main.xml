@@ -53,24 +53,34 @@
     <RadioGroup
         android:id="@+id/rgVacaciones"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:checkedButton="@id/rbcar"
+        >
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbcar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:buttonTint="#DA009C"
-            android:text="PLaya"
-            android:onClick="onRadioCLicked"
+            android:background="@drawable/rb_car_bg"
+            android:button="@null"
             />
-
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbboat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Montania"
-            android:onClick="onRadioCLicked"
+            android:background="@drawable/rb_ship_bg"
+            android:button="@null"
+
+            />
+        <RadioButton
+            android:id="@+id/rbplane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb_plane_bg"
+            android:button="@null"
             />
 
 

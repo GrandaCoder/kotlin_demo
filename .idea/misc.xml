@@ -6,10 +6,23 @@
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1775" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ch_chiptextcolor.xml" value="0.1775" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/corners.xml" value="0.1775" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_car.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_car_off.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_car_or.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_email.xml" value="0.1" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_gradient.xml" value="0.1775" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1775" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_login.xml" value="0.1775" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_oval.xml" value="0.1775" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_plane.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_plane_off.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_plane_on.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_ship.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_ship_off.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/ic_ship_on.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/rb_car_bg.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/rb_plane_bg.xml" value="0.1" />
+        <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/rb_ship_bg.xml" value="0.1" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/drawable/style_etbg.xml" value="0.2" />
         <entry key="..\:/Users/Granda/kotlin_learning/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
