@@ -8,10 +8,21 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/img_profile" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgcircular"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/img_profile"
+        app:shapeAppearanceOverlay="@style/Circular"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgcircular2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/shapeable_image"
+        app:shapeAppearanceOverlay="@style/Bordeado"
+        />
+
 
 </LinearLayout>
