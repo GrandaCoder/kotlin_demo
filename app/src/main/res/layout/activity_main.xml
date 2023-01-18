@@ -134,5 +134,13 @@
         app:track="@drawable/sw_track"
         />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_cb_on"
+        android:layout_gravity="right"/>
+
 
 </LinearLayout>
