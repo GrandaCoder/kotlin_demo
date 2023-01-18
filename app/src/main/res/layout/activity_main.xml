@@ -121,6 +121,18 @@
         tools:ignore="UseSwitchCompatOrMaterialXml"
         />
 
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificación"
+        android:textOff="off"
+        android:textOn="On"
+        app:showText="true"
+        android:checked="true"
+        android:thumb="@drawable/sw_thump"
+        app:track="@drawable/sw_track"
+        />
 
 
 </LinearLayout>
