@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.MediaController
+import android.widget.VideoView
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,13 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         //widgets
 
-        //Image view
-        var webView = findViewById<WebView>(R.id.webView)
-        var webssetigs:WebSettings = webView.getSettings()
-        webssetigs.javaScriptEnabled = true
-        webView.setWebViewClient(WebViewClient())
+        var videoView = findViewById<VideoView>(R.id.videoView)
+        var mcWeb = MediaController(this)
+        mcWeb.setAnchorView(videoView)
+        videoView.setVideoPath("https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4")
+        videoView.setMediaController(mcWeb)
 
-        webView.loadUrl("https://listado.mercadolibre.com.co/pesas#D[A:pesas]")
 
     }
 
