@@ -1,14 +1,10 @@
 package com.example.studykotlin
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.*
-import androidx.core.content.ContextCompat
-import androidx.core.widget.addTextChangedListener
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         //widgets
 
         //Image view
+        var webView = findViewById<WebView>(R.id.webView)
+        var webssetigs:WebSettings = webView.getSettings()
+        webssetigs.javaScriptEnabled = true
+        webView.setWebViewClient(WebViewClient())
+
+        webView.loadUrl("https://listado.mercadolibre.com.co/pesas#D[A:pesas]")
 
     }
 
