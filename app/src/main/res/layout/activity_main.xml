@@ -8,13 +8,15 @@
     tools:context=".MainActivity">
 
 
-    <VideoView
-        android:id="@+id/videoView"
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
-        />
-
-
+        android:text="fecha seleccionada"
+        android:textColorLink="#2192A1" />
 </LinearLayout>
