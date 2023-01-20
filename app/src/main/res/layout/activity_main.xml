@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:thumb="@drawable/sb_thumb"
         android:progressDrawable="@drawable/sk_bar_progress"
-        
+
         />
 
 </LinearLayout>

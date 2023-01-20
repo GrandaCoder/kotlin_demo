@@ -23,6 +23,20 @@ class MainActivity : AppCompatActivity() {
         // seekbar
 
 
+        var sbDemo: SeekBar = findViewById(R.id.sbDemo)
+
+        GlobalScope.launch {
+            seekbarMananger(sbDemo)
+        }
+
+    }
+
+    private fun seekbarMananger(skMananger: SeekBar) {
+        while (true){
+            sleep(100L)
+            skMananger.incrementProgressBy(5)
+        }
+
     }
 
 }
