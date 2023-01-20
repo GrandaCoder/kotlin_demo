@@ -20,27 +20,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //widgets
-        // progress bar
+        // seekbar
 
-        var pbDeterminado = findViewById<ProgressBar>(R.id.pBDeterminado)
-        pbDeterminado.max = 300
-        pbDeterminado.progress = 0
-
-        //necesitamos que termine el oncreate, creamos un hilo globalscope
-        GlobalScope.launch {
-            progressMananger(pbDeterminado)
-        }
-    }
-
-    private fun progressMananger(pbDeterminado: ProgressBar) {
-
-        while (pbDeterminado.progress < pbDeterminado.max){
-            sleep(1000L)
-            pbDeterminado.incrementProgressBy(5)
-        }
 
     }
-
 
 }
 
