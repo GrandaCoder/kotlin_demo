@@ -20,5 +20,14 @@
         android:layout_height="wrap_content"
         android:max="10"
         android:progress="3" />
-    
+
+    <SeekBar
+        android:id="@+id/sbDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/sb_thumb"
+        android:progressDrawable="@drawable/sk_bar_progress"
+        
+        />
+
 </LinearLayout>
