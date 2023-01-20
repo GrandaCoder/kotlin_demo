@@ -11,12 +11,50 @@
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorOn"
+        />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="fecha seleccionada"
-        android:textColorLink="#2192A1" />
+        android:textColorLink="#F818C8"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/pBDeterminado"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/micolor"
+        android:progressTint="@color/colorOn"
+        />
+
+    <ProgressBar
+        android:id="@+id/pbBarraSecundaria"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="50"
+        android:progressBackgroundTint="@color/colorOff"
+        android:progressTint="#FA0C0C"
+        android:secondaryProgress="80"
+        android:secondaryProgressTint="@color/black"
+        />
+
 </LinearLayout>

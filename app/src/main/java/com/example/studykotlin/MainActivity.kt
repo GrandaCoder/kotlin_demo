@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.CalendarView
-import android.widget.MediaController
-import android.widget.TextView
-import android.widget.VideoView
+import android.widget.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.lang.Thread.sleep
 import java.util.*
 
 
@@ -20,22 +20,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //widgets
+        // progress bar
 
-        //calendar
-        var cvEjemplo = findViewById<CalendarView>(R.id.calendarView)
-        var tvFeacha = findViewById<TextView>(R.id.textView)
+        var pbDeterminado = findViewById<ProgressBar>(R.id.pBDeterminado)
+        pbDeterminado.max = 300
+        pbDeterminado.progress = 0
 
-        cvEjemplo.setOnDateChangeListener { calendarView, year, month, day ->
-            var date = "$day/${1+month}/$year"
-            tvFeacha.text = "Fecha seleccionada: $date"
-
+        //necesitamos que termine el oncreate, creamos un hilo globalscope
+        GlobalScope.launch {
+            progressMananger(pbDeterminado)
         }
+    }
 
-        var calendar = Calendar.getInstance()
-        calendar.set(2026,2,22)
-        cvEjemplo.date = calendar.timeInMillis
+    private fun progressMananger(pbDeterminado: ProgressBar) {
 
-
+        while (pbDeterminado.progress < pbDeterminado.max){
+            sleep(1000L)
+            pbDeterminado.incrementProgressBy(5)
+        }
 
     }
 
