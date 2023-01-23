@@ -19,6 +19,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var numberPicker: NumberPicker = findViewById(R.id.numberPicker)
+        numberPicker.minValue = 0
+        numberPicker.maxValue = 60
+        numberPicker.value = 10
+        numberPicker.wrapSelectorWheel = true
 
     }
 
