@@ -8,22 +8,24 @@
     tools:context=".MainActivity">
 
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:iconifiedByDefault="false"
-        app:queryHint="Nombre"
+        android:text="TextView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorOn"
         />
 
-    <ListView
-        android:id="@+id/lvUsers"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:text="TextView" />
 
-        />
-
-
-
+    
 </LinearLayout>
