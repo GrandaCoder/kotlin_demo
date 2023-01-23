@@ -7,27 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <SeekBar
-        android:id="@+id/seekBar2"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="match_parent"
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:max="10"
-        android:progress="3" />
-
-    <SeekBar
-        android:id="@+id/sbDemo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:thumb="@drawable/sb_thumb"
-        android:progressDrawable="@drawable/sk_bar_progress"
-
+        android:numStars="5"
+        android:rating="3.5"
+        android:progressBackgroundTint="#413D3F4A"
+        android:progressTint="@color/colorOn"
+        android:stepSize="0.5"
+        android:isIndicator="false"
         />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 </LinearLayout>

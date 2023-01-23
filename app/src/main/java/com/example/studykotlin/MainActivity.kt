@@ -20,22 +20,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //widgets
-        // seekbar
 
+        //raitingBar
 
-        var sbDemo: SeekBar = findViewById(R.id.sbDemo)
+        //traemos el objeto raiting bar
+        var ratingBar: RatingBar = findViewById(R.id.ratingBar)
+        //traemos el text view
+        var textView : TextView = findViewById(R.id.textView)
 
-        GlobalScope.launch {
-            seekbarMananger(sbDemo)
+        //colocamos un valor por defecto
+        ratingBar.rating = 2.5f
+
+        //agregamos un listener
+        ratingBar.setOnRatingBarChangeListener { rbObject, rating, _ ->
+            textView.text = "$rating/${rbObject.numStars}"
         }
 
-    }
-
-    private fun seekbarMananger(skMananger: SeekBar) {
-        while (true){
-            sleep(100L)
-            skMananger.incrementProgressBy(5)
-        }
 
     }
 
