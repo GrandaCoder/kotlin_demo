@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // y ahora podemos llamar los objetos con el biding
-        binding.textView.text = "Hola a todos"
+
 
 
     }

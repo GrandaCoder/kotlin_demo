@@ -13,5 +13,6 @@
 
     <color name="colorOn">#FFC107</color>
     <color name="colorOff">#383942</color>
+    <color name="green">#3DEF11</color>
 
 </resources>
