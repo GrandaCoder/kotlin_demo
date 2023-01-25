@@ -6,29 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/viewRelativo"
-        android:layout_width="80dp"
-        android:layout_height="150dp"
-        android:background="@color/colorOn"
-        android:layout_centerInParent="true"
-        />
 
     <View
-        android:id="@+id/viewRelativo2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@id/viewRelativo"
-        android:background="@color/micolor" />
-
-    <View
-        android:id="@+id/vr3"
+        android:id="@+id/viewA"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="-4dp"
-        android:layout_alignParentBottom="true"
+        android:background="@color/colorOn"
+        android:translationX="45dp"
+        android:translationZ="1dp"
+        android:scaleX="1.5"/>
+
+    <View
+        android:id="@+id/viewB"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/purple_200"
+        android:translationY="45dp" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/viewB"
         android:layout_centerInParent="true"
-        android:background="@color/purple_700" />
+        android:background="@color/teal_700" />
 
 </RelativeLayout>
