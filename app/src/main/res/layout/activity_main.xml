@@ -18,9 +18,17 @@
         android:id="@+id/viewRelativo2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:background="@color/micolor"
-        android:layout_toLeftOf="@id/viewRelativo"
         android:layout_centerVertical="true"
-        />
+        android:layout_toLeftOf="@id/viewRelativo"
+        android:background="@color/micolor" />
+
+    <View
+        android:id="@+id/vr3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="-4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/purple_700" />
 
 </RelativeLayout>
